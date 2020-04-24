@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1587745344 source:c:\users\asus\documents\c++\tubes(1)\child.cpp
+	"chiild.h"
+	<iostream>
+
+1587745344 source:c:\users\asus\documents\c++\tubes(1)\parent.cpp
+	"parent.h"
+	<string>
+
+1587748761 c:\users\asus\documents\c++\tubes(1)\parent.h
+	<iostream>
+	<bits/stdc++.h>
+
+1587745358 source:c:\users\asus\documents\c++\tubes(1)\main.cpp
+	<iostream>
+	"parent.h"
+	"chiild.h"
+
+1587748761 c:\users\asus\documents\c++\tubes(1)\chiild.h
+	<iostream>
+	<bits/stdc++.h>
+
+1587744558 source:c:\users\asus\documents\c++\tubes(1)\relasi.cpp
+
