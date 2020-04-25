@@ -14,7 +14,7 @@ typedef struct elmlist_child *address_child;
 struct channel{
     string nama;
     int saluran;
-    int ID;
+    int kode;
 };
 typedef channel infotype_Child;
 struct elmlist_child{
@@ -29,21 +29,18 @@ struct List_child{
     address_child first;
 };
 
-/** TIDAK PERLU MODIFIKASI */
-void createList(List_child &L);
-void insertFirst(List_child &L, address_child P);
-void insertLast(List_child &L, address_child P);
-void insertAfter(List_child &L, address_child Prec, address_child P);
-void deleteFirst(List_child &L, address_child &P);
-void deleteLast(List_child &L, address_child &P);
-void deleteAfter(address_child Prec, address_child &P);
 
-
-/** PERLU MODIFIKASI */
+void createList_Child(List_child &L);
+void insertFirst_Child(List_child &L, address_child P);
+void insertLast_Child(List_child &L, address_child P);
+void insertAfter_Child(List_child &L, address_child Prec, address_child P);
+void deleteFirst_Child(List_child &L, address_child &P);
+void deleteLast_Child(List_child &L, address_child &P);
+void deleteAfter_Child(address_child Prec, address_child &P);
 address_child alokasiChild(infotype_Child x);
-void dealokasi(address_child &P);
-address_child searchID(List_child L, int y);
-void printInfo(List_child L);
+void dealokasi_Child(address_child &P);
+address_child searchID_Child(List_child L, int y);
+void printInfo_Child(List_child L);
 
 
 

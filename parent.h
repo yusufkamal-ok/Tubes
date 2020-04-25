@@ -23,17 +23,17 @@ struct elmlist_parent {
 struct List_parent {
     address_parent first;
 };
-void createList(List_parent &L);
+void createList_Parent(List_parent &L);
 address_parent alokasiParent(infotype_Parent z);
-void printInfo(List_parent L);
-void insertFirst(List_parent &L, address_parent P);
-void insertAfter(List_parent &L, address_parent Prec, address_parent P);
-void insertLast(List_parent &L, address_parent P);
-void deleteFirst(List_parent &L, address_parent &P);
-void deleteLast(List_parent &L, address_parent &P);
-void deleteAfter(List_parent &L, address_parent Prec, address_parent &P);
-void dealokasi(address_parent &P);
-address_parent findElm(List_parent L, int x);
+void printInfo_Parent(List_parent L);
+void insertFirst_Parent(List_parent &L, address_parent P);
+void insertAfter_Parent(List_parent &L, address_parent Prec, address_parent P);
+void insertLast_Parent(List_parent &L, address_parent P);
+void deleteFirst_Parent(List_parent &L, address_parent &P);
+void deleteLast_Parent(List_parent &L, address_parent &P);
+void deleteAfter_Parent(List_parent &L, address_parent Prec, address_parent &P);
+void dealokasi_Parent(address_parent &P);
+address_parent searchID_Parent(List_parent L, int x);
 
 
 #endif // PARENT_H_INCLUDED

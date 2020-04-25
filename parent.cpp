@@ -16,7 +16,7 @@ address_parent alokasiParent(infotype_Parent z) {
     P->next = NULL;
     return P;
 }
-void printInfo(List_parent L) {
+void printInfo_Parent(List_parent L) {
 
     address_parent P = first(L);
     if(first(L)!=NULL) {
@@ -28,7 +28,7 @@ void printInfo(List_parent L) {
         } while((P)!=first(L));
     }
 }
-void insertFirst(List_parent &L, address_parent P) {
+void insertFirst_Parent(List_parent &L, address_parent P) {
 
     address_parent Q;
     if(first(L) == NULL) {
@@ -44,7 +44,7 @@ void insertFirst(List_parent &L, address_parent P) {
         first(L) = P;
     }
 }
-address_parent searchID(List_parent L, int x) {
+address_parent searchID_Parent(List_parent L, int x) {
 
     address_parent P = first(L);
     do {
@@ -55,22 +55,22 @@ address_parent searchID(List_parent L, int x) {
     } while(P != first(L));
     return NULL;
 }
-void dealokasi(address_parent &P){
+void dealokasi_Parent(address_parent &P){
     delete P;
 }
-void insertAfter(List_parent &L, address_parent Prec, address_parent &P){
+void insertAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
     if(Prec!=NULL){
         if(Prec->next==NULL){
-            insertLast(L,P);
+            insertLast_Parent(L,P);
         }else{
             next(P)=next(Prec);
             next(Prec)=P;
         }
     }
 }
-void insertLast(List_parent &L, address_parent P){
+void insertLast_Parent(List_parent &L, address_parent P){
     if(first(L)==NULL){
-        insertFirst(L,P);
+        insertFirst_Parent(L,P);
 
     }else{
         address_parent Q = first(L);
@@ -80,7 +80,7 @@ void insertLast(List_parent &L, address_parent P){
         next(Q)=P;
     }
 }
-void deleteFirst(List_parent &L, address_parent &P){
+void deleteFirst_Parent(List_parent &L, address_parent &P){
     if(first(L)==NULL){
         cout<<"TIdak ada data"<<endl;
     }else{
@@ -95,7 +95,7 @@ void deleteFirst(List_parent &L, address_parent &P){
     }
 
 }
-void deleteLast(List_parent &L, address_parent &P){
+void deleteLast_Parent(List_parent &L, address_parent &P){
     if(first(L)!=NULL){
         if(next(first(L))==NULL){
             P=first(L);
@@ -110,10 +110,10 @@ void deleteLast(List_parent &L, address_parent &P){
         }
     }
 }
-void deleteAfter(List_parent &L, address_parent Prec, address_parent &P){
+void deleteAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
     if(Prec != NULL){
         if(next(next(Prec))== NULL){
-            deleteLast(L,P);
+            deleteLast_Parent(L,P);
         }else{
             address_parent Q = next(P);
             next(Prec) = Q;

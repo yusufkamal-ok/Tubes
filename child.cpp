@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-void createList(List_child &L) {
+void createList_Child(List_child &L) {
     first(L) = NULL;
 }
 
@@ -10,16 +10,16 @@ address_child alokasiChild(infotype_Child x) {
     address_child P = new elmlist_child;
     info(P).nama = x.nama;
     info(P).saluran = x.saluran;
-    info(P).ID = x.ID;
+    info(P).kode = x.kode;
     next(P) = NULL;
     prev(P) = NULL;
     return P;
 }
-void dealokasi(address_child &P){
+void dealokasi_Child(address_child &P){
     delete P;
 }
 
-void insertFirst(List_child &L, address_child P) {
+void insertFirst_Child(List_child &L, address_child P) {
     if(first(L) != NULL){
         next(P)=first(L);
         prev(P)=prev(first(L));
@@ -32,13 +32,13 @@ void insertFirst(List_child &L, address_child P) {
     }
 }
 
-void printInfo(List_child L) {
+void printInfo_Child(List_child L) {
     address_child P = first(L);
     if(P !=NULL){
         do{
             cout<<"nama : "<<info(P).nama<<endl;
             cout<<"saluran : "<<info(P).saluran<<endl;
-            cout<<"ID : "<<info(P).ID<<endl;
+            cout<<"kode channel : "<<info(P).kode<<endl;
             P = next(P);
             cout<<endl;
         }while(P!=first(L));
@@ -50,10 +50,10 @@ void printInfo(List_child L) {
 }
 
 
-address_child searchID(List_child L, int y) {
+address_child searchID_Child(List_child L, int y) {
     address_child P = first(L);
     while(P != NULL) {
-        if(info(P).ID==y) {
+        if(info(P).kode==y) {
             return P;
         }
         P = next(P);
@@ -61,13 +61,13 @@ address_child searchID(List_child L, int y) {
     return NULL;
 }
 
-void insertAfter(address_child &Prec, address_child P) {
+void insertAfter_Child(List_child &L, address_child &Prec, address_child P) {
     next(P)=next(Prec);
     prev(P)=Prec;
     prev(next(Prec))=P;
     next(Prec) = P;
 }
-void insertLast(List_child &L, address_child P){
+void insertLast_Child(List_child &L, address_child P){
     if(first(L)!=NULL){
         next(P)=first(L);
         prev(P)=prev(first(L));
@@ -79,7 +79,7 @@ void insertLast(List_child &L, address_child P){
         prev(P)=P;
     }
 }
-void deleteFirst(List_child &L, address_child &P){
+void deleteFirst_Child(List_child &L, address_child &P){
     P = first(L);
     if(next(P) != P){
         first(L) = next(P);
@@ -91,7 +91,7 @@ void deleteFirst(List_child &L, address_child &P){
         first(L)=NULL;
     }
 }
-void deleteLast(List_child &L, address_child &P){
+void deleteLast_Child(List_child &L, address_child &P){
     P = prev(first(L));
     if(next(P)!=NULL){
         prev(first(L))=prev(P);
@@ -102,7 +102,7 @@ void deleteLast(List_child &L, address_child &P){
         first(L)=NULL;
     }
 }
-void deleteAfter(List_child &L, address_child Prec, address_child &P){
+void deleteAfter_Child(List_child &L, address_child Prec, address_child &P){
     P = next(Prec);
     if(next(Prec)!=first(L)){
         next(Prec)=next(P);
@@ -111,7 +111,7 @@ void deleteAfter(List_child &L, address_child Prec, address_child &P){
         prev(P)=NULL;
     }else if(next(Prec)==first(L)){
         first(L)=next(first(L));
-        deleteAfter(L,Prec,P);
+        deleteAfter_Child(L,Prec,P);
     }else if(next(Prec)==first(L)){
         first(L)=NULL;
     }

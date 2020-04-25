@@ -59,15 +59,22 @@ void deleteLastRelasi(List_relasi &l,address_relasi &P){
     l.last=temp;
     next(l.last)=NULL;
 }
-void checkConnect(List_relasi l,List_child l1,List_parent l2,int a,int b){
-    address_child Q;
-    address_parent R;
-    Q=searchID(l1,a);
-    R=searchID(l2,b);
-    address_relasi P = l.First;
-    while(P!=NULL){
-        if((P.parent==Q) && (P.child==R))
-            return P;
+void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q,address_parent &R,address_relasi &S){
+    int a;
+    int b;
+    cout<<"kode channel :";
+    cin>>a;
+    cout<<"ID pelanggan : ";
+    cin>>b;
+    Q=searchID_Child(l1,a);
+    R=searchID_Parent(l2,b);
+    if(Q&&R){
+        S=alokasiRelasi(R,Q);
+        insertLastRelasi(l,S);
+        cout<<"selamat anda telah berlangganan di channel "<<endl;
+
+    }else{
+        cout<<"maaf anda tidak terdaftar sebagi pelanggan channel"<<endl;
     }
-    P = next(P);
+
 }

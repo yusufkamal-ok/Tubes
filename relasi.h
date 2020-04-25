@@ -19,7 +19,7 @@ struct List_relasi{
 address_relasi alokasiRelasi(address_parent P,address_child Q);
 void createListRelasi(List_relasi &l);
 void insertFirstRelasi(address_relasi &l,address_relasi P);
-void insertLastRelasi(address_relasi &l,address_relasi P);
+void insertLastRelasi(List_relasi &l,address_relasi P);
 void insertAfterRelasi(address_relasi Prec,address_relasi P);
 void deleteFirstRelasi(address_relasi &l,address_relasi &P);
 void deleteAfterRelasi(address_relasi Prec,address_relasi &P);
