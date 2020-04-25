@@ -2,7 +2,8 @@
 #include"parent.h"
 #include"chiild.h"
 using namespace std;
-
+//nama:yusuf kamal
+//
 
 infotype_Child x;
 infotype_Parent b;
