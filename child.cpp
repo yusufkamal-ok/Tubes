@@ -49,7 +49,6 @@ void printInfo_Child(List_child L) {
 
 }
 
-
 address_child searchID_Child(List_child L, int y) {
     address_child P = first(L);
     while(P != NULL) {
@@ -114,5 +113,18 @@ void deleteAfter_Child(List_child &L, address_child Prec, address_child &P){
         deleteAfter_Child(L,Prec,P);
     }else if(next(Prec)==first(L)){
         first(L)=NULL;
+    }
+}
+void insertSorted_child(List_child &L, infotype_Child Y){
+    if(first(L)==NULL || info(first(L)).kode > Y.kode){
+        insertFirst_Child(L,alokasiChild(Y));
+    }else{
+        address_child Q = next(first(L));
+        while(Q->next != first(L) && Y.kode > Q->info.kode){
+            Q = Q->next;
+        }
+        if(Q->next==first(L) && Y.kode > Q->info.kode){
+            insertLast_Child(L,alokasiChild(Y));
+        }
     }
 }
