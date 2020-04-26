@@ -24,11 +24,9 @@ struct elmlist_child{
 
 };
 
-
 struct List_child{
     address_child first;
 };
-
 
 void createList_Child(List_child &L);
 void insertFirst_Child(List_child &L, address_child P);
@@ -41,7 +39,5 @@ address_child alokasiChild(infotype_Child x);
 void dealokasi_Child(address_child &P);
 address_child searchID_Child(List_child L, int y);
 void printInfo_Child(List_child L);
-
-
 
 #endif // CHIILD_H_INCLUDED
