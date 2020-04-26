@@ -78,3 +78,39 @@ void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q
     }
 
 }
+void connention(List_relasi &l,List_child l1, List_parent l2,int x,int y){
+    address_parent P = searchID_Parent(l2,y);
+    address_child Q = searchID_Child(l1,x);
+    insertLastRelasi(l,alokasiRelasi(P,Q));
+}
+void dealokasi_Relasi(address_relasi &R){
+    delete R;
+}
+void disconnect(List_relasi &l,List_child l1, List_parent l2,int x,int y){
+    address_parent P = searchID_Parent(l2,y);
+    address_child Q = searchID_Child(l1,x);
+    address_relasi R = l.First,S;
+    if(P!=NULL && Q!=NULL){
+        if(R->parent==P && R->child == Q){
+        R->child =NULL;
+        R->parent =NULL;
+        deleteFirstRelasi(l,R);
+    }else{
+        while (R != NULL && R->next->parent != P && R->next->child != Q){
+            R=next(R);
+        }
+        if(R->next==l.last){
+            R->next->child=NULL;
+            R->next->parent=NULL;
+            deleteLastRelasi(l,R);
+        }else{
+            R->child=NULL;
+            R->parent=NULL;
+            S=R;
+            R=R->next;
+            deleteAfterRelasi(S,R);
+        }
+        dealokasi_Relasi(R);
+    }
+    }
+}
