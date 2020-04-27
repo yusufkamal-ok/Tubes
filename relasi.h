@@ -25,4 +25,14 @@ void deleteFirstRelasi(address_relasi &l,address_relasi &P);
 void deleteAfterRelasi(address_relasi Prec,address_relasi &P);
 void deleteLastRelasi(address_relasi &l,address_relasi &P);
 void checkConnect(List_relasi l,List_child L1,List_parent L2,string a,int b);
+
+/*
+NAMA: YUSUF KAMAL
+NIM : 1301190464
+NAMA: Reyhan Fadhlurohman Arrafi
+NIM: 1301190356
+NAMA : Erlangga Bagja Anugrah
+NIM: 1301194393
+*/
+
 #endif // RELASI_H_INCLUDED

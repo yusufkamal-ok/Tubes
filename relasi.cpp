@@ -78,3 +78,12 @@ void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q
     }
 
 }
+
+/*
+NAMA: YUSUF KAMAL
+NIM : 1301190464
+NAMA: Reyhan Fadhlurohman Arrafi
+NIM: 1301190356
+NAMA : Erlangga Bagja Anugrah
+NIM: 1301194393
+*/
