@@ -39,7 +39,7 @@ address_child alokasiChild(infotype_Child x);
 void dealokasi_Child(address_child &P);
 address_child searchID_Child(List_child L, int y);
 void printInfo_Child(List_child L);
-
+void insertSorted_child(List_child &L, infotype_Child Y);
 
 
 /*
