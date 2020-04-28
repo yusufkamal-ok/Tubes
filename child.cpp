@@ -49,7 +49,6 @@ void printInfo_Child(List_child L) {
 
 }
 
-
 address_child searchID_Child(List_child L, int y) {
     address_child P = first(L);
     while(P != NULL) {
@@ -117,6 +116,21 @@ void deleteAfter_Child(List_child &L, address_child Prec, address_child &P){
     }
 }
 
+void insertSorted_child(List_child &L, infotype_Child Y){
+    if(first(L)==NULL || info(first(L)).kode > Y.kode){
+        insertFirst_Child(L,alokasiChild(Y));
+    }else{
+        address_child Q = next(first(L));
+        while(Q->next != first(L) && Y.kode > Q->info.kode){
+            Q = Q->next;
+        }
+        if(Q->next==first(L) && Y.kode > Q->info.kode){
+            insertLast_Child(L,alokasiChild(Y));
+        }
+    }
+}
+
+
 /*
 NAMA: YUSUF KAMAL
 NIM : 1301190464
@@ -125,3 +139,4 @@ NIM: 1301190356
 NAMA : Erlangga Bagja Anugrah
 NIM: 1301194393
 */
+
