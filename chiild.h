@@ -40,4 +40,16 @@ void dealokasi_Child(address_child &P);
 address_child searchID_Child(List_child L, int y);
 void printInfo_Child(List_child L);
 
+
+
+/*
+NAMA: YUSUF KAMAL
+NIM : 1301190464
+NAMA: Reyhan Fadhlurohman Arrafi
+NIM: 1301190356
+NAMA : Erlangga Bagja Anugrah
+NIM: 1301194393
+*/
+
+
 #endif // CHIILD_H_INCLUDED

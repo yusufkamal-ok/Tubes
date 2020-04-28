@@ -78,6 +78,17 @@ void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q
     }
 
 }
+
+
+/*
+NAMA: YUSUF KAMAL
+NIM : 1301190464
+NAMA: Reyhan Fadhlurohman Arrafi
+NIM: 1301190356
+NAMA : Erlangga Bagja Anugrah
+NIM: 1301194393
+*/
+
 void connention(List_relasi &l,List_child l1, List_parent l2,int x,int y){
     address_parent P = searchID_Parent(l2,y);
     address_child Q = searchID_Child(l1,x);
@@ -114,3 +125,4 @@ void disconnect(List_relasi &l,List_child l1, List_parent l2,int x,int y){
     }
     }
 }
+
