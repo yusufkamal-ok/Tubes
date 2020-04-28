@@ -1,31 +1,31 @@
 # depslib dependency file v1.0
-1587822890 source:c:\users\asus\documents\c++\tubes(1)\child.cpp
+1587936258 source:c:\users\asus\documents\c++\tubes(1)\child.cpp
 	"chiild.h"
 	<iostream>
 
-1587824193 source:c:\users\asus\documents\c++\tubes(1)\parent.cpp
+1588118695 source:c:\users\asus\documents\c++\tubes(1)\parent.cpp
 	"parent.h"
 	<string>
 
-1587824159 c:\users\asus\documents\c++\tubes(1)\parent.h
+1588118124 c:\users\asus\documents\c++\tubes(1)\parent.h
 	<iostream>
 	<bits/stdc++.h>
 
-1587890302 source:c:\users\asus\documents\c++\tubes(1)\main.cpp
+1588117817 source:c:\users\asus\documents\c++\tubes(1)\main.cpp
 	<iostream>
 	"parent.h"
 	"chiild.h"
 	"relasi.h"
 
-1587822552 c:\users\asus\documents\c++\tubes(1)\chiild.h
+1587936517 c:\users\asus\documents\c++\tubes(1)\chiild.h
 	<iostream>
 	<bits/stdc++.h>
 
-1587890334 source:c:\users\asus\documents\c++\tubes(1)\relasi.cpp
+1588117297 source:c:\users\asus\documents\c++\tubes(1)\relasi.cpp
 	<iostream>
 	"relasi.h"
 
-1587890077 c:\users\asus\documents\c++\tubes(1)\relasi.h
+1588117428 c:\users\asus\documents\c++\tubes(1)\relasi.h
 	"parent.h"
 	"chiild.h"
 	<iostream>

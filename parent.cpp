@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-void createList(List_parent &L) {
+void createList_Parent(List_parent &L) {
     L.first = NULL;
 }
 
@@ -121,12 +121,3 @@ void deleteAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
         }
     }
 }
-
-/*
-NAMA: YUSUF KAMAL
-NIM : 1301190464
-NAMA: Reyhan Fadhlurohman Arrafi
-NIM: 1301190356
-NAMA : Erlangga Bagja Anugrah
-NIM: 1301194393
-*/

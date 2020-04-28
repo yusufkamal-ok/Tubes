@@ -24,9 +24,11 @@ struct elmlist_child{
 
 };
 
+
 struct List_child{
     address_child first;
 };
+
 
 void createList_Child(List_child &L);
 void insertFirst_Child(List_child &L, address_child P);
@@ -40,16 +42,6 @@ void dealokasi_Child(address_child &P);
 address_child searchID_Child(List_child L, int y);
 void printInfo_Child(List_child L);
 void insertSorted_child(List_child &L, infotype_Child Y);
-
-
-/*
-NAMA: YUSUF KAMAL
-NIM : 1301190464
-NAMA: Reyhan Fadhlurohman Arrafi
-NIM: 1301190356
-NAMA : Erlangga Bagja Anugrah
-NIM: 1301194393
-*/
 
 
 #endif // CHIILD_H_INCLUDED

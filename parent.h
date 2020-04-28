@@ -35,13 +35,5 @@ void deleteAfter_Parent(List_parent &L, address_parent Prec, address_parent &P);
 void dealokasi_Parent(address_parent &P);
 address_parent searchID_Parent(List_parent L, int x);
 
-/*
-NAMA: YUSUF KAMAL
-NIM : 1301190464
-NAMA: Reyhan Fadhlurohman Arrafi
-NIM: 1301190356
-NAMA : Erlangga Bagja Anugrah
-NIM: 1301194393
-*/
 
 #endif // PARENT_H_INCLUDED

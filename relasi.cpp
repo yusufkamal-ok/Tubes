@@ -1,6 +1,6 @@
 #include<iostream>
 #include"relasi.h"
-using namespace std;
+
 
 address_relasi alokasiRelasi(address_parent P,address_child Q){
     address_relasi R = new elmlist_relasi;
@@ -59,7 +59,7 @@ void deleteLastRelasi(List_relasi &l,address_relasi &P){
     l.last=temp;
     next(l.last)=NULL;
 }
-void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q,address_parent &R,address_relasi &S){
+address_relasi checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q,address_parent &R,address_relasi &S){
     int a;
     int b;
     cout<<"kode channel :";
@@ -78,17 +78,6 @@ void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q
     }
 
 }
-
-
-/*
-NAMA: YUSUF KAMAL
-NIM : 1301190464
-NAMA: Reyhan Fadhlurohman Arrafi
-NIM: 1301190356
-NAMA : Erlangga Bagja Anugrah
-NIM: 1301194393
-*/
-
 void connention(List_relasi &l,List_child l1, List_parent l2,int x,int y){
     address_parent P = searchID_Parent(l2,y);
     address_child Q = searchID_Child(l1,x);
@@ -125,4 +114,101 @@ void disconnect(List_relasi &l,List_child l1, List_parent l2,int x,int y){
     }
     }
 }
+void printInfo_Relasi(List_relasi l){
+    address_relasi Q;
+    if(l.First==NULL){
+        cout<<"======================================"<<endl;
+        cout<<"Daftar pelanggan channel subscribetion"<<endl;
+        cout<<"======================================"<<endl;
+        cout<<" Tidak ada pelanggan channel subscribetion"<<endl;
+
+    }else{
+        cout<<"====================================="<<endl;
+        cout<<"Daftar pelanggan channel subsribetion"<<endl;
+        cout<<"====================================="<<endl;
+        Q=l.First;
+        do{
+            cout<<"ID pelanggan :"<<Q->parent->info.ID<<endl;
+            cout<<"No telp pelanggan :"<<Q->parent->info.noTelp<<endl;
+            cout<<"nama :"<<Q->parent->info.nama<<endl;
+            cout<<"Data channel"<<endl;
+            cout<<"ID Channel : "<<Q->child->info.kode<<endl;
+            cout<<"Bsnysk subscribtion:"<<Q->child->info.saluran<<endl;
+            cout<<"nama channel :"<<Q->child->info.nama<<endl;
+            cout<<endl;
+            Q=Q->next;
+
+        }while(Q!=NULL);
+        cout<<"================"<<endl;
+        cout<<endl;
+    }
+}
+void deleteParent(List_relasi &l,List_parent &l1,int a){
+    address_parent P = searchID_Parent(l1,a);
+    address_relasi Q = l.First,R;
+    if(P!=NULL){
+        while(Q!=NULL){
+            if(Q->parent==P){
+                if(Q==l.First){
+                    Q->child=NULL;
+                    Q->parent=NULL;
+                    Q=Q->next;
+                    deleteFirstRelasi(l,R);
+                    dealokasi_Relasi(R);
+                }else{
+                    deleteAfterRelasi(Q,R);
+                    Q=Q->next;
+                    dealokasi_Relasi(R);
+                }
+            }else{
+        Q=Q->next;
+        }
+
+    }
+    if(P==l1.first){
+        deleteFirst_Parent(l1,P);
+    }else if(P->next==NULL){
+        deleteLast_Parent(l1,P);
+    }else{
+        address_parent temp = l1.first;
+        while(temp->next!=P){
+            temp = temp->next;
+        }
+        deleteAfter_Parent(l1,temp,P);
+    }
+    dealokasi_Parent(P);
+    }else{
+        cout<<"ID pelanggan tidak di temukan"<<endl;
+    }
+}
+void deleteChild(List_relasi &l,List_child l1,int a){
+    address_child P = searchID_Child(l1,a);
+    address_relasi Q = l.First,R;
+    if(P!=NULL){
+        while(Q!=NULL){
+            if(Q->child==P){
+                if(Q==l.First){
+                    Q->child=NULL;
+                    Q->parent=NULL;
+                    Q=Q->next;
+                    deleteFirstRelasi(l,R);
+                    dealokasi_Relasi(R);
+                }else{
+                    deleteAfterRelasi(Q,R);
+                    Q=Q->next;
+                    dealokasi_Relasi(R);
+                }
+            }else{
+        Q=Q->next;
+        }
+
+}
+deleteLast_Child(l1,P);
+    }else{
+        cout<<"ID channel tidak ditemukan "<<endl;
+    }
+}
+
+
+
 
