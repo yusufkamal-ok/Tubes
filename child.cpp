@@ -116,3 +116,12 @@ void deleteAfter_Child(List_child &L, address_child Prec, address_child &P){
         first(L)=NULL;
     }
 }
+
+/*
+NAMA: YUSUF KAMAL
+NIM : 1301190464
+NAMA: Reyhan Fadhlurohman Arrafi
+NIM: 1301190356
+NAMA : Erlangga Bagja Anugrah
+NIM: 1301194393
+*/
