@@ -24,6 +24,7 @@ void insertAfterRelasi(address_relasi Prec,address_relasi P);
 void deleteFirstRelasi(address_relasi &l,address_relasi &P);
 void deleteAfterRelasi(address_relasi Prec,address_relasi &P);
 void deleteLastRelasi(address_relasi &l,address_relasi &P);
+
 void checkConnect(List_relasi l,List_child L1,List_parent L2,string a,int b);
 
 /*
@@ -34,5 +35,11 @@ NIM: 1301190356
 NAMA : Erlangga Bagja Anugrah
 NIM: 1301194393
 */
+
+void checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q,address_parent &R,address_relasi &S);
+void connention(List_relasi &l,List_child l1, List_parent l2,int x,int y);
+void dealokasi_Relasi(address_relasi &R);
+void disconnect(List_relasi &l,List_child l1, List_parent l2,int x,int y);
+
 
 #endif // RELASI_H_INCLUDED
