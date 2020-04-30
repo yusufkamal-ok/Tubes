@@ -35,18 +35,18 @@ int main()
         cout<<"**          MENU           **"<<endl;
         cout<<"=============================="<<endl;
         cout<<" 1. Input Pelanggan            "<<endl;
-        cout<<" 2. Print semua Pelanggan      "<<endl;
-        cout<<" 3. Input channel            "<<endl;
-        cout<<" 4. Prints channel            "<<endl;
-        cout<<" 5. connect            "<<endl;
-        cout<<" 6. check connect            "<<endl;
+        cout<<" 2. Print Semua Pelanggan      "<<endl;
+        cout<<" 3. Input Channel            "<<endl;
+        cout<<" 4. Print Channel            "<<endl;
+        cout<<" 5. Connect            "<<endl;
+        cout<<" 6. Check Connect            "<<endl;
         cout<<" 7. Disconnect            "<<endl;
-        cout<<" 8. Print relasi            "<<endl;
-        cout<<" 9. Input Pelanggan            "<<endl;
-        cout<<" 10. delete Pelanggan            "<<endl;
-        cout<<" 11. delete channel            "<<endl;
+        cout<<" 8. Print Relasi            "<<endl;
+        cout<<" 9. Search Pelanggan            "<<endl;
+        cout<<" 10. Delete Pelanggan            "<<endl;
+        cout<<" 11. Delete Channel            "<<endl;
         cout<<"==============================="<<endl;
-        cout<<" Plih menu : ";
+        cout<<" Pilih menu : ";
         cin>>pilihMenu;
 
         switch(pilihMenu){
@@ -81,7 +81,7 @@ int main()
 
             case 2 :{
                 system("CLS");
-                cout<<"===info data pelanggan===="<<endl;
+                cout<<"===Info Data Pelanggan===="<<endl;
                 printInfo_Parent(P);
 
             }
@@ -90,21 +90,21 @@ int main()
 
         case 3 :{
             system("CLS");
-            cout<<"====Input channel===="<<endl;
-            cout<<" ID channel :";
+            cout<<"====Input Channel===="<<endl;
+            cout<<" ID Channel :";
             cin>>b.kode;
             if(searchID_Child(Q,b.kode)==NULL){
-                cout<<"masukan nama channel : ";
+                cout<<"Masukkan Nama Channel : ";
                 cin>>b.nama;
-                cout<<"masukan ID Channel  :";
+                cout<<"Masukkan ID Channel  :";
                 cin>>b.kode;
                 insertSorted_child(Q,b);
                 cout<<endl;
-                cout<<" data channel telah terdaftar "<<endl;
+                cout<<" Data channel telah terdaftar "<<endl;
 
             }else{
                 cout<<endl;
-                cout<<" ID telah di gunakan coba lagi "<<endl;
+                cout<<" ID telah digunakan coba lagi "<<endl;
             }
         }
         case 4 :{
@@ -116,10 +116,10 @@ int main()
 
         case 5 : {
             system("CLS");
-            cout<<"===connect==="<<endl;
-            cout<<"ID pelanggan : ";
+            cout<<"===Connect==="<<endl;
+            cout<<"ID Pelanggan : ";
             cin>>in1;
-            cout<<"ID channel : ";
+            cout<<"ID Channel : ";
             cin>>in2;
             connention(R,Q,P,in1,in2);
 
@@ -128,20 +128,20 @@ int main()
 
         case 6 :{
             system("CLS");
-            cout<<"===Check connenction==="<<endl;
-            cout<<"ID pelanggan  ";
+            cout<<"===Check Connection==="<<endl;
+            cout<<"ID Pelanggan  ";
             cin>>in1;
-            cout<<"ID channel " ;
+            cout<<"ID Channel " ;
             cin>>in2;
             if(checkConnect(R,Q,P,child,parent,relasi)!=NULL){
                 address_parent S = searchID_Parent(P,in1);
                 address_child T = searchID_Child(Q,in2);
                 cout<<endl;
-                cout<<"pelanggan "<<S->info.nama<<"mensubcription  channel"<<T->info.nama;
+                cout<<"Pelanggan "<<S->info.nama<<"mensubcription  channel"<<T->info.nama;
 
             }else{
                 cout<<endl;
-                cout<<"pelanggan tidak mensubcription";
+                cout<<"Pelanggan tidak mensubcription";
             }
         }
         break;
@@ -156,7 +156,7 @@ int main()
             disconnect(R,Q,P,in1,in2);
             cout<<"Disconnect dilakukan";
             cout<<endl;
-            cout<<"tekan enter untuk lanjut";
+            cout<<"Press any key to continue";
         }
         break;
 
@@ -172,12 +172,12 @@ int main()
             address_parent S = searchID_Parent(P,in3);
             address_relasi T = R.First;
             if(S==NULL){
-                cout<<"ID pelanggan "<<in3<<"tidak di temukan"<<endl;
+                cout<<"ID Pelanggan "<<in3<<"tidak di temukan"<<endl;
 
             }else{
-                cout<<"ID pelanggan :"<<S->info.ID<<endl;
+                cout<<"ID Pelanggan :"<<S->info.ID<<endl;
                 if(T!=NULL){
-                    cout<<"ID channel :";
+                    cout<<"ID Channel :";
                     do{
                         if(T->parent==S){
                             cout<<" "<<T->child->info.kode;
@@ -186,18 +186,18 @@ int main()
                     }while(T!=NULL);
                 }
             }
-            cout<<" Silakan Tekan enter untuk melanjutkan ";
+            cout<<" Press any key to continue";
         }
         break;
 
         case 10 :{
             system("CLS");
-            cout<<"==Delete pelanggan=="<<endl;
-            cout<<"ID pelanggan : ";
+            cout<<"==Delete Pelanggan=="<<endl;
+            cout<<"ID Pelanggan : ";
             cin>>in3;
             deleteParent(R,P,in3);
             cout<<endl;
-            cout<<"silakan tekan enter untuk melanjutkan ";
+            cout<<"Press any key to continue";
         }
         break;
 
@@ -207,7 +207,7 @@ int main()
             cout<<" ID channel :";
             cin>>in3;
             deleteChild(R,Q,in3);
-            cout<<"Silakan tekan enter untuk melanjutkan ";
+            cout<<"Press any key to continue";
 
         }
         break;

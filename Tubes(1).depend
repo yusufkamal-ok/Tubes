@@ -30,3 +30,34 @@
 	"chiild.h"
 	<iostream>
 
+1588256537 source:d:\asd task\tubes\child.cpp
+	"chiild.h"
+	<iostream>
+
+1588256537 d:\asd task\tubes\chiild.h
+	<iostream>
+	<bits/stdc++.h>
+
+1588257142 source:d:\asd task\tubes\main.cpp
+	<iostream>
+	"parent.h"
+	"chiild.h"
+	"relasi.h"
+
+1588256537 d:\asd task\tubes\parent.h
+	<iostream>
+	<bits/stdc++.h>
+
+1588256537 d:\asd task\tubes\relasi.h
+	"parent.h"
+	"chiild.h"
+	<iostream>
+
+1588256537 source:d:\asd task\tubes\parent.cpp
+	"parent.h"
+	<string>
+
+1588256537 source:d:\asd task\tubes\relasi.cpp
+	<iostream>
+	"relasi.h"
+
