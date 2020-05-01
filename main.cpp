@@ -168,6 +168,7 @@ int main()
 
         case 9 :{
             system("CLS");
+            cout<<"masukan ID pelanggan:";
             cin>>in3;
             address_parent S = searchID_Parent(P,in3);
             address_relasi T = R.First;

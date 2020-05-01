@@ -4,6 +4,9 @@ using namespace std;
 
 void createList_Child(List_child &L) {
     first(L) = NULL;
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 
 address_child alokasiChild(infotype_Child x) {
@@ -14,9 +17,15 @@ address_child alokasiChild(infotype_Child x) {
     next(P) = NULL;
     prev(P) = NULL;
     return P;
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void dealokasi_Child(address_child &P){
     delete P;
+
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 
 void insertFirst_Child(List_child &L, address_child P) {
@@ -30,6 +39,9 @@ void insertFirst_Child(List_child &L, address_child P) {
         next(P)=P;
         prev(P)=P;
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 
 void printInfo_Child(List_child L) {
@@ -46,7 +58,8 @@ void printInfo_Child(List_child L) {
         cout<<"list kosong";
     }
     cout<<endl;
-
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 
 
@@ -59,6 +72,9 @@ address_child searchID_Child(List_child L, int y) {
         P = next(P);
     }
     return NULL;
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 
 void insertAfter_Child(List_child &L, address_child &Prec, address_child P) {
@@ -66,6 +82,9 @@ void insertAfter_Child(List_child &L, address_child &Prec, address_child P) {
     prev(P)=Prec;
     prev(next(Prec))=P;
     next(Prec) = P;
+
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void insertLast_Child(List_child &L, address_child P){
     if(first(L)!=NULL){
@@ -78,6 +97,9 @@ void insertLast_Child(List_child &L, address_child P){
         next(P)=P;
         prev(P)=P;
     }
+
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void deleteFirst_Child(List_child &L, address_child &P){
     P = first(L);
@@ -90,6 +112,8 @@ void deleteFirst_Child(List_child &L, address_child &P){
     }else{
         first(L)=NULL;
     }
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void deleteLast_Child(List_child &L, address_child &P){
     P = prev(first(L));
@@ -101,6 +125,8 @@ void deleteLast_Child(List_child &L, address_child &P){
     }else{
         first(L)=NULL;
     }
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void deleteAfter_Child(List_child &L, address_child Prec, address_child &P){
     P = next(Prec);
@@ -115,6 +141,8 @@ void deleteAfter_Child(List_child &L, address_child Prec, address_child &P){
     }else if(next(Prec)==first(L)){
         first(L)=NULL;
     }
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void insertSorted_child(List_child &L, infotype_Child Y){
     if(first(L)==NULL || info(first(L)).kode > Y.kode){
@@ -128,4 +156,6 @@ void insertSorted_child(List_child &L, infotype_Child Y){
             insertLast_Child(L,alokasiChild(Y));
         }
     }
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }

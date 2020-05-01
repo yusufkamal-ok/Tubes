@@ -61,3 +61,34 @@
 	<iostream>
 	"relasi.h"
 
+1588313354 source:c:\users\asus\documents\github\tubes\child.cpp
+	"chiild.h"
+	<iostream>
+
+1588312819 c:\users\asus\documents\github\tubes\chiild.h
+	<iostream>
+	<bits/stdc++.h>
+
+1588313354 source:c:\users\asus\documents\github\tubes\parent.cpp
+	"parent.h"
+	<string>
+
+1588118124 c:\users\asus\documents\github\tubes\parent.h
+	<iostream>
+	<bits/stdc++.h>
+
+1588313354 source:c:\users\asus\documents\github\tubes\relasi.cpp
+	<iostream>
+	"relasi.h"
+
+1588117428 c:\users\asus\documents\github\tubes\relasi.h
+	"parent.h"
+	"chiild.h"
+	<iostream>
+
+1588312324 source:c:\users\asus\documents\github\tubes\main.cpp
+	<iostream>
+	"parent.h"
+	"chiild.h"
+	"relasi.h"
+

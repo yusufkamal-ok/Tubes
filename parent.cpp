@@ -4,6 +4,9 @@ using namespace std;
 
 void createList_Parent(List_parent &L) {
     L.first = NULL;
+
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 }
 
 address_parent alokasiParent(infotype_Parent z) {
@@ -15,6 +18,9 @@ address_parent alokasiParent(infotype_Parent z) {
     info(P).ID=z.ID;
     P->next = NULL;
     return P;
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void printInfo_Parent(List_parent L) {
 
@@ -27,6 +33,8 @@ void printInfo_Parent(List_parent L) {
             P = next(P);
         } while((P)!=first(L));
     }
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void insertFirst_Parent(List_parent &L, address_parent P) {
 
@@ -43,6 +51,9 @@ void insertFirst_Parent(List_parent &L, address_parent P) {
         next(Q) = P;
         first(L) = P;
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 address_parent searchID_Parent(List_parent L, int x) {
 
@@ -54,9 +65,15 @@ address_parent searchID_Parent(List_parent L, int x) {
         P = next(P);
     } while(P != first(L));
     return NULL;
+
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 }
 void dealokasi_Parent(address_parent &P){
     delete P;
+
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void insertAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
     if(Prec!=NULL){
@@ -67,6 +84,8 @@ void insertAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
             next(Prec)=P;
         }
     }
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void insertLast_Parent(List_parent &L, address_parent P){
     if(first(L)==NULL){
@@ -79,6 +98,8 @@ void insertLast_Parent(List_parent &L, address_parent P){
         }
         next(Q)=P;
     }
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void deleteFirst_Parent(List_parent &L, address_parent &P){
     if(first(L)==NULL){
@@ -93,6 +114,9 @@ void deleteFirst_Parent(List_parent &L, address_parent &P){
             next(P)=NULL;
         }
     }
+
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 
 }
 void deleteLast_Parent(List_parent &L, address_parent &P){
@@ -109,6 +133,9 @@ void deleteLast_Parent(List_parent &L, address_parent &P){
             next(Q) = NULL;
         }
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void deleteAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
     if(Prec != NULL){
@@ -120,4 +147,7 @@ void deleteAfter_Parent(List_parent &L, address_parent Prec, address_parent &P){
             next(P) = NULL;
         }
     }
+
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }

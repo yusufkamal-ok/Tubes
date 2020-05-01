@@ -8,10 +8,16 @@ address_relasi alokasiRelasi(address_parent P,address_child Q){
     R->child = Q;
     R->next = NULL;
 
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
+
 }
 void createListRelasi(List_relasi &l){
     l.First=NULL;
     l.last=NULL;
+
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 }
 void insertFirstRelasi(List_relasi &l,address_relasi P){
     if(l.First==NULL){
@@ -22,6 +28,9 @@ void insertFirstRelasi(List_relasi &l,address_relasi P){
         next(P)=l.First;
         l.First=P;
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void insertLastRelasi(List_relasi &l,address_relasi P){
     if(l.First==NULL){
@@ -31,10 +40,17 @@ void insertLastRelasi(List_relasi &l,address_relasi P){
         next(l.last)=P;
         l.last=P;
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void insertAfterRelasi(address_relasi Prec,address_relasi P){
     P = next(Prec);
     next(Prec)=P;
+
+
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 }
 void deleteFirstRelasi(List_relasi &l,address_relasi &P){
     P=l.First;
@@ -44,11 +60,16 @@ void deleteFirstRelasi(List_relasi &l,address_relasi &P){
     }else{
         l.First=NULL;
     }
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void deleteAfterRelasi(address_relasi Prec,address_relasi &P){
     P = next(Prec);
     next(Prec)=next(P);
     next(P)=NULL;
+
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 }
 void deleteLastRelasi(List_relasi &l,address_relasi &P){
     address_relasi temp=l.First;
@@ -58,6 +79,9 @@ void deleteLastRelasi(List_relasi &l,address_relasi &P){
     }
     l.last=temp;
     next(l.last)=NULL;
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 address_relasi checkConnect(List_relasi &l,List_child &l1,List_parent &l2,address_child &Q,address_parent &R,address_relasi &S){
     int a;
@@ -77,14 +101,24 @@ address_relasi checkConnect(List_relasi &l,List_child &l1,List_parent &l2,addres
         cout<<"maaf anda tidak terdaftar sebagi pelanggan channel"<<endl;
     }
 
+
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
+
 }
 void connention(List_relasi &l,List_child l1, List_parent l2,int x,int y){
     address_parent P = searchID_Parent(l2,y);
     address_child Q = searchID_Child(l1,x);
     insertLastRelasi(l,alokasiRelasi(P,Q));
+
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void dealokasi_Relasi(address_relasi &R){
     delete R;
+    /* NAMA: Erlangga Bagja Anugrah
+                                                             NIM :1301194393*/
 }
 void disconnect(List_relasi &l,List_child l1, List_parent l2,int x,int y){
     address_parent P = searchID_Parent(l2,y);
@@ -113,6 +147,9 @@ void disconnect(List_relasi &l,List_child l1, List_parent l2,int x,int y){
         dealokasi_Relasi(R);
     }
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void printInfo_Relasi(List_relasi l){
     address_relasi Q;
@@ -142,6 +179,9 @@ void printInfo_Relasi(List_relasi l){
         cout<<"================"<<endl;
         cout<<endl;
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void deleteParent(List_relasi &l,List_parent &l1,int a){
     address_parent P = searchID_Parent(l1,a);
@@ -180,6 +220,9 @@ void deleteParent(List_relasi &l,List_parent &l1,int a){
     }else{
         cout<<"ID pelanggan tidak di temukan"<<endl;
     }
+
+    /* NAMA: YUSUF KAMAL
+                                                             NIM : 1301190464*/
 }
 void deleteChild(List_relasi &l,List_child l1,int a){
     address_child P = searchID_Child(l1,a);
@@ -207,6 +250,8 @@ deleteLast_Child(l1,P);
     }else{
         cout<<"ID channel tidak ditemukan "<<endl;
     }
+    /* NAMA: Reyhan Fadhlurohman Arrafi
+                                                             NIM :1301190356*/
 }
 
 
